@@ -1,0 +1,24 @@
+# Create a local file
+echo "This is a personal document." > personal_doc.txt
+
+# Add it to exfs2 inside nested directories
+./exfs2 -a /docs/personal/notes.txt -f personal_doc.txt
+
+
+# Create another local file
+echo "System event log entry." > system.log
+
+# Add it to a different nested path
+./exfs2 -a /logs/system/events.log -f system.log
+
+# Create a third local file
+echo "Confidential work report content." > work_report.txt
+
+# Add it to a deeper path
+./exfs2 -a /docs/work/reports/quarterly.txt -f work_report.txt
+
+# Create a dummy local file to add
+echo "Content for the deep file." > deep_file.txt
+
+# Run the add command - this will create /level1, /level1/level2, /level1/level2/level3
+./exfs2 -a /level1/level2/level3/myfile.txt -f deep_file.txt
