@@ -1,0 +1,2 @@
+Found existing ExFS2 segments. (Basic Check)
+Extracting '/mydir/hello1.txt' to stdout
