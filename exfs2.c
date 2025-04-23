@@ -425,9 +425,10 @@ void free_data_block(uint32_t block_num) {
          } else {
               // Optional: Can add debug printf("Freed data block %u\n", block_num);
          }
-     } else {
-         fprintf(stderr, "Warning: Attempted to free already free data block %u\n", block_num);
-     }
+     } 
+     //else {
+     //    fprintf(stderr, "Warning: Attempted to free already free data block %u\n", block_num);
+     //}
 
     fclose(fp);
 }
